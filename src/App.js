@@ -1,5 +1,5 @@
 import './App.css';
-import sqrt from './sqrtNM';
+import sqrt from './sqrtNM.ts';
 import { useState } from 'react';
 
 function App() {
