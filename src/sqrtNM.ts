@@ -2,7 +2,7 @@ function sqrtNM(arg){
     const GUESS = arg / 3;
     // In finding the zero of f(x) = x2 − a, e have f′(x) = 2x
     const epsilon = 0.0000001;
-    let x0;
+    let x0 : number;
     let x1 = GUESS;
     do {
         x0 = x1;
