@@ -3,9 +3,10 @@ import sqrt from './sqrtNM';
 import { useState } from 'react';
 
 function App() {
-    const [sqrtArg, setSqrtArg] = useState('');
-    const handleChange = (evt) => {
-        setSqrtArg(evt.currentTarget.value);
+    const [sqrtArg, setSqrtArg] = useState(2);
+    const handleChange = (event) => {
+        const { currentTarget } = event;
+        setSqrtArg(currentTarget.value);
     };
 
     return (
@@ -13,8 +14,8 @@ function App() {
             <header className="App-header">
                 <h2>Demo</h2>
                 <label>
-                    sqrt arg:&nbsp;
-                    <input type="text" value={sqrtArg} onChange={handleChange} />
+                    arg:&nbsp;
+                    <input type="text" value={sqrtArg} onChange={handleChange}/>
                 </label>
                 <div>sqrt(arg) = {sqrt(sqrtArg)}</div>
             </header>
