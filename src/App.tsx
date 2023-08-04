@@ -1,12 +1,12 @@
 import './App.css';
-import sqrt from './sqrtNM.ts';
-import { useState } from 'react';
+import sqrt from './sqrtNM';
+import {ChangeEvent, useState} from 'react';
 
 function App() {
-    const [sqrtArg, setSqrtArg] = useState(2);
-    const handleChange = (event) => {
+    const [sqrtArg , setSqrtArg] = useState(2);
+    const handleChange = (event : ChangeEvent<HTMLInputElement>) => {
         const { currentTarget } = event;
-        setSqrtArg(currentTarget.value);
+        setSqrtArg(currentTarget.value as unknown as number);
     };
 
     return (
